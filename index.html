@@ -22,6 +22,12 @@
 		<main>
 			<section class="container">
 				<h2>Meus pacientes</h2>
+
+                <label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" 
+				 placeholder="Digite o nome do paciente">
+
+				
 				<table>
 					<thead>
 						<tr>
@@ -36,7 +42,7 @@
 						<tr class="paciente" id="primeiro-paciente">
 							<td class="info-nome">Paulo</td>
 							<td class="info-peso">100</td>
-							<td class="info-altura">5.00</td>
+							<td class="info-altura">-2.00</td>
 							<td class="info-gordura">10</td>
 							<td class="info-imc">0</td>
 						</tr>
@@ -74,12 +80,23 @@
 					</tbody>
 				</table>
 
+				
+                <span id="erro-ajax"  class="invisivel">Erro ao buscar pacientes</span>
+				<button id="Buscar-pacientes" class="botao bto-principal">Buscar paciente</button>
+				
+				
+
 			</section>
 		</main>
 
 		<!-- ... -->
 <section class="container">
     <h2 id="titulo-form">Adicionar novo paciente</h2>
+	<ul id="mensagens-erro">
+		<li>Peso é inválido</li>
+		<li>Altura é inválida!</li>
+	</ul>
+	  
     <form id="form-adiciona">
         <div class="grupo">
             <label for="nome">Nome:</label>
@@ -97,12 +114,18 @@
             <label for="gordura">% de Gordura:</label>
             <input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
         </div>
-
+		
         <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
     </form>
 </section>
 		<script src="js/calcula-imc.js"></script>
 
 		<script src="js/form.js"></script>
+
+		<script src="js/remover-paciente.js"></script>
+
+		<script src="js/filtra.js"></script>
+
+		<script src="js/Buscar-pacientes.js"></script>
 	</body>
 </html>
